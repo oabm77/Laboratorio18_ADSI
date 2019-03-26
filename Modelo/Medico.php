@@ -96,7 +96,7 @@ values ('$this->identificacion','$this->nombres','$this->apellidos','$this->espe
 	public function consultarMedico($identificacion)
 	{
 		$this->Conexion=Conectarse();
-		$sql="select * from medicos where medIdentificacion='$identificacion'";
+		$sql="SELECT * FROM medicos WHERE medIdentificacion='$identificacion'";
 		$resultado=$this->Conexion->query($sql);
 		$this->Conexion->close();
 		return $resultado;	
@@ -110,6 +110,21 @@ values ('$this->identificacion','$this->nombres','$this->apellidos','$this->espe
 		$this->Conexion->close();
 		return $resultado;
 	}
+
+	public function actualizarMedico($idMedico,$identificacion,$nombres,$apellidos,$especialidad,$telefono,$correo)
+	{
+		$this->Conexion=Conectarse();
+		$sql="UPDATE medicos SET medIdentificacion='$identificacion', 
+					medNombres='$nombres', 
+					medApellidos='$apellidos', 
+					medEspecialidad='$especialidad', 
+					medTelefono='$telefono', 
+					medCorreo='$correo'
+					WHERE idMedico='$idMedico' ;";
+		$resultado=$this->Conexion->query($sql);
+		$this->Conexion->close();
+		return $resultado;
+	}	
 }
 
 ?>

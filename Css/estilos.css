@@ -1,6 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+select {
+	width:100%;
+}
+
 #divContenedor {
 	width:1000px;
 	height:643px;

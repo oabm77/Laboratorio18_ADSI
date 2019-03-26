@@ -10,7 +10,7 @@
 		<div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
 		<a href="index2.php?pag=insertarPaciente">Agregar</a>
 		<a href="index2.php?pag=listarPacientesTabla">Consultar</a>
-		<a href="#">Actualizar</a>	
+		<a href="index2.php?pag=actualizarPaciente">Actualizar</a>	
 		</div>
 	</li>
 	<li><a href="#" onmouseover="mopen('m3')" onmouseout="mclosetime()">Citas</a>

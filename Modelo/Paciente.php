@@ -99,6 +99,20 @@ values ('$this->identificacion','$this->nombres','$this->apellidos','$this->fech
 		$this->Conexion->close();
 		return $resultado;	
 	}
+
+	public function actualizarPaciente($idPaciente,$identificacion,$nombres,$apellidos,$fechaNacimiento,$sexo)
+	{
+		$this->Conexion=Conectarse();
+		$sql="UPDATE pacientes SET pacIdentificacion='$identificacion', 
+					pacNombres='$nombres', 
+					pacApellidos='$apellidos', 
+					pacFechaNacimiento='$fechaNacimiento', 
+					pacSexo='$sexo'
+					WHERE idPaciente='$idPaciente' ;";
+		$resultado=$this->Conexion->query($sql);
+		$this->Conexion->close();
+		return $resultado;
+	}
 }
 
 ?>
